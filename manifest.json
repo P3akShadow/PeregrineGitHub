@@ -1,0 +1,29 @@
+  {
+    "manifest_version": 2,
+	
+    "name": "Peregrine",
+    "description": "Sign up bot for TISS.",
+    "version": "1.0",
+    
+    "page_action":{
+      "_comment" : "source: https://creazilla.com/de/nodes/1540-wanderfalke",
+      "default_icon": "prergrineSilhouette.png"
+    },
+
+    "permissions": [
+      "declarativeContent", 
+      "storage",
+      "tabs",
+      "*://*.tuwien.ac.at/*"],
+
+    "content_scripts": [ {
+      "matches": ["*://*.tuwien.ac.at/*"],
+      "js": [
+        "PeregrineJS/out/production/PeregrineJS/lib/kotlin.js",
+        "PeregrineJS/out/production/PeregrineJS/PeregrineJS.js"]
+     } ],
+
+    "web_accessible_resources": [
+      "*"
+    ]
+}
